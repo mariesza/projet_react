@@ -1,5 +1,7 @@
-# Remarque sur le projet 
+# Auteurs 
 Le projet a été réalisé par BEKADI Douaa, SEMAAN Adella, BROTO Marie et SZABELSKI Marie. 
+
+# Remarques sur le projet 
 Nous n'avons pas réussi à accéder à l'API, nous avons réalisé ce projet avec des données récupérés au niveau de postman que nous avons traduit en français.
 Seul un individu est présenté. 
 
@@ -25,7 +27,7 @@ La présentation a été réalisé à travers le pattern "Master/Details"
 Le soin UI a été réalisé en modifiant les couleurs (coloré pour donner de la motivation), avec des boutons plus esthétiques et arrondies.
 
 
-Nous aurions aimé réalisées plus de choses, mieux structurer les pages et créer des affichages plus jolies, mais nos compétences en programmation sont trop limitées pour l'instant pour réaliser ces éléments dans le délais imparti. 
+Nous aurions aimé réalisées plus de choses, mieux structurer les pages et créer des affichages plus jolies, avoir l'accès à l'API et ajouter d'autres éléments interactifs mais nos compétences en programmation sont trop limitées pour l'instant pour réaliser ces éléments dans le délais imparti. 
 
 # Getting Started with Create React App
 
