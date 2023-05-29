@@ -4,7 +4,7 @@ Nous n'avons pas réussi à accéder à l'API, nous avons réalisé ce projet av
 Seul un individu est présenté. 
 
 # Vidéo 
-Voici le lien de la vidéo associée, comme il était demandé : https://drive.google.com/file/d/1R22g3BkMI5EzYYiMv25SlPRTizS8HY6E/view?usp=sharing
+Voici le lien de la vidéo associée, comme il été demandé : https://drive.google.com/file/d/1R22g3BkMI5EzYYiMv25SlPRTizS8HY6E/view?usp=sharing
 
 Je n'ai pas réussi à le mettre dans github car elle est trop lourde. 
 
