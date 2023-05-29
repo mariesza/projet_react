@@ -1,4 +1,3 @@
-
 .ht-banner {
     color: black;
     text-align: center;
@@ -6,10 +5,9 @@
     border-bottom: solid 3px black;
     background-color: #f1bc76;
     width: 100%;
-
-}
-
-.ht-banner a {
+  }
+  
+  .ht-banner a {
     color: blue;
     background-color: #fffbfb;
     text-decoration: none;
@@ -24,13 +22,40 @@
     cursor: pointer;
     margin-right: 50px;
   }
-
-.presentation {
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 130px;
-    color: black;
+  
+  .presentation {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 24px;
     font-weight: bold;
-
-}
-
+    text-transform: uppercase;
+    border-bottom: 2px solid #757070;
+    padding-bottom: 10px;
+  }
+  
+  
+  .Individu {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .individu-info {
+    width: 48%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(228, 201, 201, 0.1);
+  }
+  
+  .info-block {
+    margin-bottom: 10px;
+  }
+  
+  .info-item {
+    margin-bottom: 10px;
+  }
+  
+  .info-label {
+    font-weight: bold;
+  }

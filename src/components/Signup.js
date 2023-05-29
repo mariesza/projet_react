@@ -7,93 +7,76 @@ import axios from "axios";
 import "./Signup.css";
 import User from "../models/User";
 
-
-const axiosInstance = axios.create({
-  baseURL: "https://fake-health-data-api.shrp.dev",
-  timeout: 3000,
-  headers: {},
-});
-
 function Signup() {
-
   const {
-    reset,
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
-  const [user, setUser] = useState(null);
-
-  async function onSubmitSignUpForm(data) {
-    const aUser = new User(
-      data.firstname,
-      data.lastname,
-      data.email,
-      data.password
-    );
-
-    try {
-      setLoading(true);
-      const response = await axiosInstance.post(`/https://fake-health-data-api.shrp.dev/auth/signin`, aUser);
-
-      if (response.status === 204) {
-        setUser(aUser);
-      }
-
-      setLoading(false);
-      setError(false);
-      reset();
-    } catch (error) {
-      console.log(error);
-      setLoading(false);
-      setError(true);
-    }
-  }
+  const onSubmit = (data) => {
+    // Gérer la soumission du formulaire ici
+  };
 
   return (
     <div className="Signup">
-      {loading === false && error === false && user !== null && (
-        <p>
-          Compte créé pour <b>{`${user.firstname} ${user.lastname}`}</b> (
-          {user.email})
-        </p>
-      )}
-      {loading === true && <p>Chargement...</p>}
-      {error === true && <p>Une erreur s'est produite</p>}
-      <form onSubmit={handleSubmit(onSubmitSignUpForm)}>
-        <input
-          placeholder="Prénom"
-          {...register("firstname", { required: true })}
-        />
-        {errors.firstname && <span>Ce champ est obligatoire</span>}
+      <h1 className="Signup-title">Création de compte</h1>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div className="Signup-field">
+          <label className="Signup-label">Prénom</label>
+          <input
+            className="Signup-input"
+            type="text"
+            {...register("firstname", { required: true })}
+          />
+          {errors.firstname && (
+            <span className="Signup-error">Ce champ est obligatoire</span>
+          )}
+        </div>
 
-        <input
-          placeholder="Nom"
-          {...register("lastname", { required: true })}
-        />
-        {errors.lastname && <span>Ce champ est obligatoire</span>}
+        <div className="Signup-field">
+          <label className="Signup-label">Nom</label>
+          <input
+            className="Signup-input"
+            type="text"
+            {...register("lastname", { required: true })}
+          />
+          {errors.lastname && (
+            <span className="Signup-error">Ce champ est obligatoire</span>
+          )}
+        </div>
 
-        <input
-          placeholder="Adresse mail"
-          {...register("email", { required: true })}
-        />
-        {errors.email && <span>Ce champ est obligatoire</span>}
+        <div className="Signup-field">
+          <label className="Signup-label">Adresse mail</label>
+          <input
+            className="Signup-input"
+            type="email"
+            {...register("email", { required: true })}
+          />
+          {errors.email && (
+            <span className="Signup-error">Ce champ est obligatoire</span>
+          )}
+        </div>
 
-        <input
-          type="password"
-          placeholder="Mot de passe"
-          {...register("password", { required: true })}
-        />
-        {errors.password && <span>Ce champ est obligatoire</span>}
+        <div className="Signup-field">
+          <label className="Signup-label">Mot de passe</label>
+          <input
+            className="Signup-input"
+            type="password"
+            {...register("password", { required: true })}
+          />
+          {errors.password && (
+            <span className="Signup-error">Ce champ est obligatoire</span>
+          )}
+        </div>
 
-        <button type="submit">Création de compte</button>
-        
-        <br /> 
-        <a href="/"> Retour </a>
-      
+        <button className="Signup-submit" type="submit">
+          Création de compte
+        </button>
+
+        <a className="Signup-link" href="/">
+          Retour
+        </a>
       </form>
     </div>
   );

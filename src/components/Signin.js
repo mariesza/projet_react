@@ -2,21 +2,15 @@ import "./Signin.css";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import jwt_decode from "jwt-decode";
-import { redirect } from "react-router-dom";
-
-
+import { useNavigate } from "react-router-dom";
 import User from "../models/User";
-
-
 import axios from "axios";
-
 
 const axiosInstance = axios.create({
   baseURL: "https://fake-health-data-api.shrp.dev",
   timeout: 3000,
   headers: {},
 });
-
 
 function Signin() {
   const {
@@ -25,12 +19,11 @@ function Signin() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-
+  const navigate = useNavigate();
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [user, setUser] = useState(null);
-
 
   async function onSubmitSignInForm(data) {
     try {
@@ -40,21 +33,16 @@ function Signin() {
         password: data.password,
       });
 
-
       if (response.status === 200) {
         const aUser = new User(null, null, data.email);
-
 
         aUser.accessToken = response.data.data.access_token;
         aUser.refreshToken = response.data.data.refresh_token;
         aUser.expires = response.data.data.expires;
 
-
         const decodedPayload = jwt_decode(aUser.accessToken);
 
-
         aUser.id = decodedPayload.id;
-
 
         setLoading(true);
         const response2 = await axiosInstance.get(`/users/${aUser.id}`, {
@@ -62,22 +50,18 @@ function Signin() {
         });
         setLoading(false);
 
-
         if (response2.status === 200) {
           aUser.first_name = response2.data.data.first_name;
           aUser.last_name = response2.data.data.last_name;
           aUser.email = response2.data.data.email;
           aUser.status = response2.data.data.status;
 
-
           setError(false);
           setUser(aUser);
+          reset();
         } else {
           setError(true);
         }
-
-
-        reset();
       }
     } catch (error) {
       console.log(error);
@@ -86,51 +70,54 @@ function Signin() {
     }
   }
 
-
   function onSignOut() {
     setUser(null);
-    return redirect("/connexion");
+    navigate("/connexion");
   }
 
-
   return (
-    <div className="Signup">
+    <div className="Signin">
+      <h1 className="Signin-title">Connexion</h1>
       {loading === false && error === false && user !== null && (
-        <p>
+        <p className="Signin-message">
           <b>
             {user.first_name} {user.last_name}
-          </b>
-          &nbsp; ({user.email}) est connecté
-          <button onClick={() => onSignOut()}>Se déconnecter</button>
+          </b>{" "}
+          ({user.email}) est connecté
+          <button onClick={() => onSignOut()} className="Signin-button">
+            Se déconnecter
+          </button>
         </p>
       )}
-      {loading === true && <p>Chargement...</p>}
-      {error === true && <p>Une erreur s'est produite</p>}
+      {loading === true && <p className="Signin-message">Chargement...</p>}
+      {error === true && <p className="Signin-message">Une erreur s'est produite</p>}
       {user === null && (
         <form onSubmit={handleSubmit(onSubmitSignInForm)}>
           <input
             placeholder="Adresse mail"
             type="email"
             {...register("email", { required: true })}
+            className="Signin-input"
           />
-          {errors.email && <span>Ce champ est obligatoire</span>}
-
+          {errors.email && <span className="Signin-error">Ce champ est obligatoire</span>}
 
           <input
             type="password"
             placeholder="Mot de passe"
             {...register("password", { required: true })}
+            className="Signin-input"
           />
-          {errors.password && <span>Ce champ est obligatoire</span>}
+          {errors.password && <span className="Signin-error">Ce champ est obligatoire</span>}
 
-          <button type="submit">Connexion</button>
-          <br /> 
-         <a href="/"> Retour </a>
+          <button type="submit" className="Signin-submit">
+            Connexion
+          </button>
+          <br />
+          <a href="/" className="Signin-link">Retour</a>
         </form>
       )}
     </div>
   );
 }
-
 
 export default Signin;

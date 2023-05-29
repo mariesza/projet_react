@@ -21,9 +21,9 @@ import DataPhysio from '../models/DataPhysio';
 // }];
 
 const physio = [
-    new DataPhysio("2022-01-08 à 11:52",90.1),
-    new DataPhysio("2022-01-08 à 12:48", 82.1),
-    new DataPhysio("2022-01-29 à 21:16", 69.4),
+    new DataPhysio("08-02-2022 à 11:52",90.1),
+    new DataPhysio("06-02-2022 à 12:48", 82.1),
+    new DataPhysio("29-01-2022 à 21:16", 69.4),
 ];
 
 export default physio;

@@ -16,12 +16,14 @@ function PremierePage(){
 
       
     return (
+    <div classNam = "test">
+
     <div className="ht-pageune">
      <Link to="/auth/signin">
         <button onClick={onClick}>Se connecter</button>
       </Link>
       <br/>
-      <br/>
+      <br/>  
 
 
     <Link to="/auth/signup">
@@ -36,7 +38,14 @@ function PremierePage(){
     <Link to="/auth">
         <button1 onClick={onClick}>Découvrir l'application </button1>
       </Link>
+    
+    <div/>
 
+    <div className="ht-image">
+      <img src="/images/image.jpg" className="logo1" alt="Présentation de l'application" />
+    </div>
+
+    </div>
     </div>
     )
 }

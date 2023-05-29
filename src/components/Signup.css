@@ -1,0 +1,64 @@
+.Signup {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .Signup-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .Signup-field {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .Signup-label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .Signup-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .Signup-error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  .Signup-submit {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .Signup-link {
+    display: block;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+  }

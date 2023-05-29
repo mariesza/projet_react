@@ -1,0 +1,55 @@
+.Signin {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-sizing: border-box; /* Ajout de la propriété box-sizing */
+  }
+  
+  .Signin-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .Signin-message {
+    margin-bottom: 10px;
+  }
+  
+  .Signin-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ajout de la propriété box-sizing */
+  }
+  
+  .Signin-error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .Signin-submit {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .Signin-link {
+    text-align: center;
+    margin-top: 10px;
+    display: block;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .Signin-link:hover {
+    text-decoration: underline;
+  }
