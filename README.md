@@ -3,6 +3,11 @@ Le projet a été réalisé par BEKADI Douaa, SEMAAN Adella, BROTO Marie et SZAB
 Nous n'avons pas réussi à accéder à l'API, nous avons réalisé ce projet avec des données récupérés au niveau de postman que nous avons traduit en français.
 Seul un individu est présenté. 
 
+# Vidéo 
+Voici le lien de la vidéo associée, comme il était demandé : https://drive.google.com/file/d/1R22g3BkMI5EzYYiMv25SlPRTizS8HY6E/view?usp=sharing
+
+Je n'ai pas réussi à le mettre dans github car elle est trop lourde. 
+
 # Cahier des charges 
 Les pages de connection/inscription Sign in et Sign up ont été réalisé
 
