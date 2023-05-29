@@ -1,5 +1,5 @@
 # Remarque sur le projet 
-Le projet a été réalisé avec BEKADI Douaa, SEMAAN Adella, BROTO Marie. 
+Le projet a été réalisé par BEKADI Douaa, SEMAAN Adella, BROTO Marie et SZABELSKI Marie. 
 Nous n'avons pas réussi à accéder à l'API, nous avons réalisé ce projet avec des données récupérés au niveau de postman que nous avons traduit en français.
 Seul un individu est présenté. 
 
