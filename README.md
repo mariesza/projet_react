@@ -1,3 +1,20 @@
+# Remarque sur le projet 
+Le projet a été réalisé avec BEKADI Douaa, SEMAAN Adella, BROTO Marie. 
+Nous n'avons pas réussi à accéder à l'API, nous avons réalisé ce projet avec des données récupérés au niveau de postman que nous avons traduit en français.
+Seul un individu est présenté. 
+
+# Cahier des charges 
+Les pages de connection/inscription Sign in et Sign up ont été réalisé
+Le sign out a été remplacé par une page "mon compte"
+L'historique des données est réalisé (données physiologiques et physiques)
+Un formulaire permettant à l'utilisateur de saisir des données a été réalisé
+Des encouragements ont été glissés dans la page
+La présentation a été réalisé à travers le pattern "Master/Details"
+
+Le soin UI a été réalisé en modifiant les couleurs (coloré pour donner de la motivation), avec des boutons plus esthétiques et arrondies.
+
+Nous aurions aimé réalisées plus de choses, mieux structurer les pages et créer des affichages plus jolies, mais nos compétences en programmation sont trop limitées pour l'instant pour réaliser ces éléments dans le délais imparti. 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
