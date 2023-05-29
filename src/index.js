@@ -12,11 +12,17 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import PageAccueil from './components/PageAccueil';
 import MonCompte from './components/MonCompte.js';
+import PremierePage from './components/PremierePage';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <PremierePage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/auth",
+    element: <PageAccueil />,
     errorElement: <ErrorPage />,
   },
   {

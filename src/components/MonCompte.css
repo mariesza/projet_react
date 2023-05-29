@@ -1,0 +1,36 @@
+
+.ht-banner {
+    color: black;
+    text-align: center;
+    padding: 5px;
+    border-bottom: solid 3px black;
+    background-color: #f1bc76;
+    width: 100%;
+
+}
+
+.ht-banner a {
+    color: blue;
+    background-color: #fffbfb;
+    text-decoration: none;
+    float: right;
+    display: block;
+    padding: 5px 10px;
+    border: solid 1px;
+    border-radius: 1px;
+    background-color: #fffbfb;
+    color: #333;
+    font-size: 12px;
+    cursor: pointer;
+    margin-right: 50px;
+  }
+
+.presentation {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 130px;
+    color: black;
+    font-weight: bold;
+
+}
+

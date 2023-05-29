@@ -1,8 +1,28 @@
 .ht-banner {
     color: black;
     text-align: center;
-    padding: 32px;
+    padding: 5px;
     border-bottom: solid 3px black;
+    background-color: #f1bc76;
+    width: 100%;
+
+}
+
+.ht-banner button1{
+    float: right;
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* justify-content: flex-end;  */
+    /* display: block; */
+    padding: 5px 10px;
+    border: solid 1px;
+    border-radius: 1px;
+    background-color: #fffbfb;
+    color: #333;
+    font-size: 12px;
+    cursor: pointer;
+    /* margin-right: 50px; */
+    /* font-weight: bold; */
 }
 
 .logo {
@@ -13,3 +33,56 @@
     border-radius: 5px;
 }
 
+.contenu {
+    text-align: center;
+}
+
+.contenu button {
+    margin-left: 5px;
+    margin-right: 130px;
+    /* display: flex; */
+    flex-direction: row;
+    /* justify-content: flex-end;  */
+    /* permet d'afficher dans une grand boite ou non */
+    display: block;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f1bc76;
+    color: #fefdfd;
+    font-size: 15px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    
+    
+}
+
+.contenu textarea {
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    font-family: Arial;
+    width: 500px;
+    height: 150px;
+  }
+  
+.contenu buttonEnr {
+    margin-left: 500px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; 
+    /* permet d'afficher dans une grand boite ou non */
+    display: inline-block;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    color: #333;
+    font-size: 13px;
+    cursor: pointer;
+}

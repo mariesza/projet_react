@@ -12,7 +12,6 @@ import PhysiqueDataPreview from './PhysiqueDataPreview';
 function PageAccueil() {
   const [displayList, setDisplayList] = useState(false);
   const [displayList2, setDisplayList2] = useState(false);
-  const [displayList3, setDisplayList3] = useState(false);
 
   const [response, setResponse] = useState('');
   const [message, setMessage] = useState('');
@@ -29,9 +28,6 @@ function PageAccueil() {
     setDisplayList2(!displayList2);
   };
 
-  const onClick3 = () => {
-    setDisplayList3(!displayList3);
-  };
 
   const handleResponseChange = (event) => {
     setResponse(event.target.value);
@@ -70,31 +66,27 @@ function PageAccueil() {
   const title = 'Health Tracker';
 
   return (
+    <div>
     <div className="ht-banner">
-      <Link to="/auth/signup">
-        <button onClick={onClick}>S'inscrire</button>
+    <Link to="/auth/mon-compte">
+        <button1 onClick={onClick}>Mon compte</button1>
       </Link>
-
-      <Link to="/auth/signin">
-        <button onClick={onClick}>Se connecter</button>
-      </Link>
-
-      <Link to="/auth/mon-compte">
-        <button onClick={onClick}>Mes infos</button>
-      </Link>
+      <br/>
 
       <h1 className="ht-title">{title}</h1>
       <p>Ton application santé qui te suit au quotidien 🤗</p>
       <img src="/images/logo1.png" width={100} height={100} className="logo" alt="logo de l'application" />
-
+    
+    </div>
+    <div className="contenu">
+ 
       <p>Bonjour, qu'as-tu fait aujourd'hui pour atteindre tes objectifs ?</p>
       <textarea
         value={response}
         onChange={handleResponseChange}
         placeholder="Dis-moi tout !..."
       />
-      <br />
-      <button onClick={handleSaveResponse}>Enregistrer</button>
+      <buttonEnr onClick={handleSaveResponse}>Enregistrer</buttonEnr>
       {message && <p>{message}</p>}
 
       <br/>
@@ -121,12 +113,11 @@ function PageAccueil() {
     
       <button onClick={() => onClick()}>Afficher l'historique du poids</button>
       {displayList === true && <PhysioDataPreview />}  
-      <br />
-      <br />
+      <br/>
       <button onClick={() => onClick2()}>Afficher l'historique des activités</button>
       {displayList2 === true && <PhysiqueDataPreview />}  
 
-
+      </div>
     </div>
     );
 }

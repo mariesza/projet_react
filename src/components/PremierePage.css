@@ -1,0 +1,55 @@
+.ht-pageune {
+    color: black;
+    text-align: center;
+    padding: 5px;
+    border-bottom: solid 3px black;
+    background-color: #f1bc76;
+    width: 100%;
+}
+
+.ht-pageune button {
+    float: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; 
+    display: inline-block;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    color: #333;
+    font-size: 13px;
+    cursor: pointer;
+    margin-right: 50px;
+}
+.ht-pageune button1 {
+    margin-left: 5px;
+    margin-right: 130px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; 
+    /* permet d'afficher dans une grand boite ou non */
+    display: inline-block;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    color: #333;
+    font-size: 13px;
+    cursor: pointer;
+    
+}
+
+.logo {
+    float: left;
+    padding: 8px;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+body {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #ffffff3e;
+  }
